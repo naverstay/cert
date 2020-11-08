@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    //'styles/styles.css': 'sass/styles.scss',
+                    'styles/main_ticket.css': 'sass/main_ticket.scss',
                     'styles/main_global.css': 'sass/main_global.scss'
                 }
             }
@@ -164,9 +164,9 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-imageoptim');
-    
+
     isWIN ? grunt.loadNpmTasks('grunt-contrib-sass') : grunt.loadNpmTasks('grunt-wellington');
-    
+
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask('default', ['watch']);
 };

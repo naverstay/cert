@@ -5,8 +5,26 @@ $resp_step_2: 1040px;
 
 $content-max-w: 657px;
 
+$icomoon-font-name: 'icons';
 $icomoon-font-path: "../fonts";
-$icomoon-font-name: 'air_icons';
+$icomoon-font-family: 'icons';
+
+$color-default: #2c2c2c;
+$translucent-default: rgba(44, 44, 44, 1);
+$color-dark: #000;
+$color-white: #f5f5f5;
+$color-red: #e62739;
+$color-redlight: #ec6672;
+$color-pink: #fce4e6;
+$color-redshadow: #e62739;
+$translucent-red: rgba(230, 39, 57, 1);
+$color-grey: #4f4f4f;
+$color-light: #a1a1a1;
+$color-dgrey: #2c2c2c;
+$color-line: #cdcdcd;
+$color-green: #3ebd6b;
+$color-greenlight: #66d98f;
+$color-bggreen: #ecf8f0;
 
 $Roboto: 'Roboto', sans-serif;
 $CirceBold: 'CirceBold', sans-serif;
@@ -27,7 +45,7 @@ $cross_font_TimesNewRoman: 'Times New Roman', 'Times CY', 'Nimbus Roman No9 L', 
 $cross_font_TrebuchetMS: 'Trebuchet MS', 'Helvetica CY', sans-serif;
 $cross_font_Verdana: Verdana, 'Geneva CY', 'DejaVu Sans', sans-serif;
 
-$default_t_color: #000;
+$default_t_color: $color-grey;
 $placeholder_color: #ccc;
 
 @mixin opacity($val : 1, $important : 0) {
@@ -236,9 +254,7 @@ $placeholder_color: #ccc;
 }
 
 @mixin inline_flexbox() {
-  display: -webkit-inline-box;
   display: -moz-inline-box;
-  display: -ms-inline-flex;
   display: -webkit-inline-flex;
   display: inline-flex;
 }
@@ -782,15 +798,15 @@ $placeholder_color: #ccc;
 }
 
 @mixin keyframe_sub($animation_name) {
-  @-webkit-keyframes $animation_name {
+  @-webkit-keyframes #{$animation_name} {
     @content;
   }
 
-  @-moz-keyframes $animation_name {
+  @-moz-keyframes #{$animation_name} {
     @content;
   }
 
-  @keyframes $animation_name {
+  @keyframes #{$animation_name} {
     @content;
   }
 }

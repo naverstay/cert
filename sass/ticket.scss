@@ -1,0 +1,288 @@
+@page {
+  margin: 0 !important;
+  size: A4 portrait;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font: 16px/1.2 $font-PN;
+  color: $default_t_color;
+}
+
+.hide {
+  display: none !important;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  border: 1px solid #000;
+}
+
+.base {
+  padding-bottom: 150px;
+}
+
+.section_inner {
+  width: 100%;
+  max-width: $content-max-w;
+  //margin: 0 auto;
+}
+
+.certificate-holder {
+  position: relative;
+}
+
+.ticket {
+
+  &-holder {
+    height: 100vh;
+  }
+
+  &-body {
+    max-width: 830px;
+    margin: 0 auto;
+  }
+
+  &-img {
+    margin-left: -10px;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &-link {
+    @extend %global_flex_block_row_nowrap_flex_start_center;
+    margin-top: 27px;
+    text-transform: uppercase;
+    color: $color-grey;
+    font: bold 14px/20px $font-PN;
+
+    span {
+      + span {
+        padding-left: 30px;
+      }
+    }
+  }
+
+  &-split {
+    border-top: 1px dashed $color-dgrey;
+    margin: 27px 0;
+  }
+
+  &-date {
+    color: $color-dgrey;
+    font: bold 16px/24px $font-PN;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 4px;
+    border: 2px solid $color-grey;
+    padding: 14px 15px;
+    text-transform: uppercase;
+  }
+
+  &-event {
+    font: 900 32px/1 $font-PNC;
+    margin: 34px 0 30px;
+  }
+
+  &-school {
+    @extend %global_flex_block_row_nowrap_flex_start_center;
+    font: bold 14px/20px $font-PN;
+    color: $color-dgrey;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+
+    span {
+      img {
+        display: block;
+        max-width: 90px;
+      }
+
+      + span {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  &-provider {
+    @extend %global_flex_block_row_nowrap_flex_start_center;
+    font: 18px/24px $font-PN;
+    color: $color-dgrey;
+    text-transform: uppercase;
+    letter-spacing: .015em;
+
+    span {
+      img {
+        display: block;
+        max-width: 172px;
+      }
+
+      + span {
+        padding-left: 16px;
+      }
+    }
+
+    &_tip {
+      font: 12px/16px $font-PN;
+      background: #f5f5f5;
+      border-radius: 4px;
+      padding: 8px;
+      flex: 1 0 38.5%;
+    }
+
+    &_address {
+      padding-right: 10px;
+      padding-top: 13px;
+    }
+
+    &_info {
+      @extend %global_flex_block_row_nowrap_flex-start;
+      color: #000;
+      font: 300 16px/28px $font-default;
+      margin-bottom: 26px;
+
+      p {
+        b {
+          padding-right: 28px;
+        }
+      }
+    }
+  }
+
+  &-def_list {
+    margin-bottom: 16px;
+
+    &.__last {
+      padding-right: 15px;
+    }
+  }
+
+  &-term {
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
+  }
+
+  &-def {
+    margin-bottom: 16px;
+    font: 48px/1 $font-PNC;
+    letter-spacing: -.04em;
+  }
+
+  &-info_list {
+    @extend %global_flex_block_row_wrap_flex-start_stretch;
+
+    li {
+      width: 50%;
+      padding-left: 10px;
+
+      &:nth-child(2n - 1) {
+        padding-right: 10px;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &-info {
+    background: #ecf8f0;
+    border-radius: 4px;
+    padding: 16px 16px 16px 48px;
+    position: relative;
+    color: $color-dgrey;
+    font-size: 12px;
+    line-height: 16px;
+
+    span {
+      &[class^="icon-"], &[class*=" icon-"] {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        color: $default_t_color;
+        font-size: 15px;
+      }
+    }
+  }
+
+  &-footer {
+    @extend %global_flex_block_row_nowrap_flex-start;
+    border-top: 4px solid $color-dgrey;
+    padding-top: 16px;
+
+    &_link {
+      text-decoration: underline;
+    }
+
+    &_info {
+      padding-right: 30px;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+
+      p {
+        + p {
+          margin-top: 8px;
+        }
+      }
+    }
+
+    &_logo {
+      flex: 1 0 38.5%;
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// **********  text
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.text_upper {
+  text-transform: uppercase;
+}
+
+.flex-1 {
+  flex: 1 0 auto;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
